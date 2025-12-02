@@ -1,0 +1,241 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% To select a journal, use its code for the 
+% journal= option in the \documentclass command.
+% The journal codes for this template are:
+
+% Wearable Technologies: wet
+% Data and Policy: dap
+% Data-centric Engineering: dce
+% Environmental Data Science: eds
+% Programmable Materials: prm
+% Journal of Nonlinear Waves: jnw
+% Flow: flw
+% Judgment and Decision Making: jdm
+% Psychometrika: psy
+% Forum of Mathematics, Pi: fmp
+% Forum of Mathematics, Sigma: fms
+% Glasgow Mathematical Journal: gmj
+% Research Synthesis Methods: rsm
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[journal=dap]{CUP-JNL-DTM}%
+
+
+% If using any of the following journal options:
+%   wet, dap, dce, eds, prm, jnw, flw, jdm, psy, rsm
+% then uncomment the following line:
+\addbibresource{bibliography.bib}
+
+
+%%%% Packages
+\usepackage{graphicx}
+\usepackage{multicol,multirow}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage{rotating}
+\usepackage{appendix}
+\usepackage{ifpdf}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage[colorlinks,allcolors=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\numberwithin{equation}{section}
+
+
+\jname{Data/Math}
+\articletype{ARTICLE TYPE}
+%\artid{20}
+\jyear{YEAR}
+%\jvol{4}
+%\jissue{1}
+%\raggedbottom
+
+
+\begin{document}
+
+\begin{Frontmatter}
+
+\title[Article Title]{Mind the gap: AI needs a new model of innovation to connect technological progress to widespread public value}
+
+% There is no need to include ORCID IDs in your .pdf; this information is captured by the submission portal when a manuscript is submitted. 
+\author[1]{Neil D. Lawrence}
+\author[2]{Jessica K. Montgomery}
+
+\authormark{Lawrence and Montgomery}
+
+\address[1]{\orgdiv{Department of Computer Science and Technology}, \orgname{University of Cambridge}, \orgaddress{\city{Cambridge}, \postcode{CB3 0FD}, \state{Cambridgeshire},  \country{UK}}}
+
+\address[2]{\orgdiv{Department of Computer Science and Technology}, \orgname{University of Cambridge}, \orgaddress{\city{Cambridge}, \postcode{CB3 0FD}, \state{Cambridgeshire},  \country{UK}}. \email{jkm40@cam.ac.uk}}
+
+\authormark{Lawrence and Montgomery}
+
+\keywords{AI, innovation, public services, public dialogue}
+
+\keywords[MSC Codes]{\codes[Primary]{CODE1}; \codes[Secondary]{CODE2, CODE3}}
+
+\abstract{Artificial intelligence (AI) risks following a well-worn path along which technological innovations fail to address society's most pressing problems. Public dialogues over the last decade show consistent public priorities for AI, with demands for innovative solutions to the challenges that affect our health, wellbeing, and shared prosperity while preserving democratic governance. Technical innovation over this period has advanced most rapidly in areas where public interest was lowest, creating a gap between societal needs and AI capabilities. This paper examines the gap between the supply of AI technologies and demands for AI innovation from society. It proposes that a systematic misalignment between the two stems from an innovation model that prioritises technical feasibility and commercial viability over public value. The result is a new `social productivity paradox': AI advances everywhere except where society needs it most. Addressing this gap requires not just new technologies, but a reimagining of how to direct innovation through an `attention reinvestment cycle' that centres human capabilities and needs. This alternative model focuses on freeing human attention to focus on activities requiring uniquely human skills, creating a virtuous cycle that aligns innovation with societal priorities. Successful implementation requires dialogic capacity to understand societal needs, distributive capacity to connect the supply of new technologies to areas of demand, and absorptive capacity to deploy AI in domains of societal need. Translating these ideas into practice requires collaborative networks of frontline professionals engaged in developing AI innovations that are grounded in local context and needs.}
+
+\end{Frontmatter}
+
+\section*{Impact Statement}
+This paper diagnoses why AI innovation consistently fails to address societal priorities. Analysis of a decade of public dialogues shows consistent preferences for AI that helps address societal needs. However, technical progress has been fastest in areas of lowest public interest. As governments look to AI as a tool to deliver public value and manage growing demand for public services, this "social productivity paradox" will become increasingly significant, as will the risk of repeating failures like the Post Office Horizon scandal. The paper proposes the "attention reinvestment cycle" as a framework that uses human time---rather than economic returns---to drive innovation. Understanding this diagnosis can shape AI deployment strategies, in particular in public services where the gap between technical capability and societal deployment is most acute.
+
+\section{Introduction}
+
+There is a stark contrast between public aspirations for AI and the areas of greatest technical progress. Public dialogues demonstrate consistent priorities: AI to enhance healthcare delivery, support education, improve public services---addressing crucial societal challenges---while preserving meaningful human interaction and ensuring democratic governance.  During this same period, technical innovation has advanced rapidly in areas where public interest was lowest. This disconnect represents more than a temporary misalignment; it reflects a systemic failure of the innovation ecosystem to respond to clearly articulated public needs and concerns. The result is a `social productivity paradox': while AI has made considerable advances over the last ten years, these advances are failing to address society's most pressing needs, creating a gap between innovation and widespread public benefit. 
+
+This gap is not primarily a technical issue, though many areas of need do pose complex technical problems. It stems from institutional, economic, and cultural factors that prioritise technical feasibility and commercial viability in a wider economic system focused on monetising attention. Without counterbalancing forces, AI risks following a well-worn path that leads to technological innovations that fail to serve broader societal goals. Addressing this gap requires not just new technologies, but a  reimagining of how we direct innovation through an attention reinvestment cycle that focuses human capital in areas of societal need.
+
+\section{The innovation economy's (mis)alignment problem}
+
+There is now almost a decade of evidence that examines what people want from AI. Public dialogues conducted since 2016 show consistent patterns in people's aspirations and concerns. 
+
+In 2016, the Royal Society convened the UK's first public dialogue on machine learning \citep{ipsos2017}. In dialogue sessions that convened demographically representative groups of people across the UK, participants considered the use of AI in a variety of case study applications, ranging from marketing to transport to predictive policing. In almost all cases, participants could see the potential value of AI, as well as its risks, and weighed the two in a nuanced evaluation of the technology. The results showed a strong desire for AI-enabled solutions in areas such as healthcare, education, and social services, where AI could support human wellbeing. They also highlighted a set of shared governance questions: Who is benefitting from these technologies? Who bears the risks? And how can independent governance steward the development of these technologies towards socially beneficial outcomes?  In only one area were discussions consistently negative; the use of AI for creative pursuits and the generation of art 
+
+Nearly a decade later, it is precisely this area---emulating human creativity---where AI has made its most visible and celebrated advances.\footnote{Ironically, the unrequested advances in emulation of human creativity may be key to delivering on these aspirations, but we are not saying they are not useful, just they were not asked for.}
+
+A similar 2024 UK dialogue showed that public priorities remain largely unchanged \citep{aiCam2024}. In health, people would like AI to reduce the time that healthcare workers spend on paperwork, leaving more time for interaction with patients, while accelerating medical research that delivers new diagnostic tools and more effective treatments. In education, there are aspirations for AI that helps teachers manage routine administration and students pursue personalised learning pathways, enhancing human interactions in the classroom. In law enforcement, people hope for more accurate crime pattern identification and better response times from emergency services, but balance these benefits against concerns about biased surveillance and accountability. In energy policy, people are looking for AI-enabled solutions that reduce carbon emissions and energy bills through optimised energy systems and better transport networks, but worry about the environmental impact and affordability of the AI infrastructure to deliver them.
+
+Across time, these public dialogues show clear patterns in people's aspirations for AI technologies. These include:
+\begin{itemize}
+    \item Tools that deliver meaningful societal benefits in areas like health, education, and other public services, supporting frontline workers to deliver more efficient and effective services, and that address concerns about privacy, security, and bias or inequality.
+    \item AI interventions that enhance human capabilities---acting as a support, not a replacement for human decision-making---and that create time and space for meaningful human interaction. 
+    \item Democratic control over the development and application of AI, including transparency over where and how these tools are being used, supported by independent oversight and governance. 
+\end{itemize}
+
+There are also indications of changing attitudes across this period. Recent dialogues suggest growing public scepticism of AI, stemming from mistrust of the corporations that are leading technology development and questions about the balance between profit motives and public value creation \citep{milltown2023}. \footnote{For a summary of insights from recent public dialogues, see \cite{montgomery2024}} 
+
+These dialogues provide a benchmark against which to consider the trajectory of AI innovation. The last decade has brought impressive technical advances, but there is an emerging trend in which AI performs in areas where the public has expressed least interest in automation, while priority areas are unaddressed. This suggests a disconnect in our innovation ecosystem: the mechanisms that should direct technical resources toward areas of societal need seem to be failing. The result is a structural gap between the supply of AI capabilities and societal demand---a gap that puts both public trust and the technology's potential for positive impact at risk.
+
+Studies of technology adoption have consistently shown that a gap emerges between innovation and society when producer power dominates over user needs \citep{Lundvall1992}, when markets are not steered towards public purpose \citep{mazzucato2013entrepreneurial}, and when technological complexity outpaces the capacity of democratic institutions for steerage \citep{Dewey1927}. AI is not unique in the history of emerging technologies in these regards. It should, however, benefit from the clarity with which publics have set out their priorities and from new technical capabilities that allow more direct interactions between users and computers. 
+
+\section{The new productivity paradox}
+
+\subsection{Case studies in digital deployment failures}
+
+The history of large-scale digital transformation initiatives offers cautionary lessons about the gap between technological ambition and real-world implementation \citep{montgomery2024}. 
+
+Two prominent UK examples illustrate the profound societal costs of this disconnect. The first is the Post Office Horizon scandal, which began in the 1990s when the UK Post Office deployed a new computerised accounting system across its branch network. This system was intended to automate financial reconciliation processes at branch level. Responsibility for reporting accurate accounts lay with the sub-postmaster who managed the local branch. Software errors and bugs in the new system, alongside issues implementing it in-branch, resulted in accounting errors that were attributed to the branch managers. Over the next two decades, over 900 sub-postmasters were prosecuted for theft or false accounting, with some people imprisoned, bankrupted, or ostracised from their communities, before the Post Office acknowledged these technical errors \citep[see e.g.][]{bbc2024}. 
+
+The UK's National Programme for IT aimed to move the UK's health service to a unified system of electronic health records, through the Lorenzo care records scheme. In 2011, after ten years of work and at a cost of over £10 billion, the scheme was cancelled as a result of failings in system development and implementation \citep{committee2013}. Reviews of this failure identified a critical flaw in the programme's end-user engagement: it had been designed with little input from the healthcare professionals or patients who would use the system. The result was a failure to accommodate the diverse workflows found in clinical environments or patient concerns \citep{justinia2017}.
+
+These projects were not only failures of technology; they were failures of social understanding, rooted in a misunderstanding of human needs on the ground. Successful implementation requires bridging these needs and the provided solution through careful stakeholder engagement and flexible system designs that adapt to local conditions; this in turn calls for innovation strategies that provide a capacity for dialogue with affected communities and agility to respond to new needs. 
+
+The COVID-19 pandemic provides a recent illustration of challenge in translating 'AI for good'-style projects to public value. While hundreds of AI tools were developed for COVID-19 diagnosis, none were suitable for clinical use. The issue was not lack of technology or societal need. Instead, tools were developed without meaningful engagement with clinical workflows or the real-world settings in which they would need to function \citep{Roberts2021}. Technical capability did not match deployment need.
+
+\subsection{The new productivity paradox}
+
+In 1987 Robert Solow commented that ``You can see the computer age everywhere but in the productivity statistics'' \citep{solow1987}. This `productivity paradox' described the gap between large-scale investments in computing made in the 1970s and 1980s and productivity increases. Multiple factors contributed to the lag, including the time required for organisations to assimilate new technologies, redesign business processes, and measure productivity gains in service sectors \citep{brynjolfsson1993}. 
+
+\cite{hounshell1989}'s classic case study of technology deployment in DuPont illustrates the drivers at play. A business invests in research and development (R\&D) to deliver technical innovations, which can be deployed to deliver productivity gains or profits, which can in turn be re-invested in R\&D. Successful innovators must not only innovate, but also understand how to deploy those innovations for business benefit. The capability of an organisation to do this has become known as \emph{absorptive capacity} \citep{cohen1990}.
+
+Understanding the organisational context into which technology was deployed helped resolve the `productivity paradox' of the 1980s \citep{brynjolfsson1993}. Technical innovation needed to be accompanied by organisational and cultural innovation to translate technological potential to business value. This pattern is an inversion of Conway's law, which states that organisations are constrained to create systems that mirror their own communication structure \citep{conway1968}. In the inverted form, the organisational structure must adapt to benefit from the value that new information systems can provide. An example of this principle comes from Jeff Bezos's 2002 Amazon memo, known as the API Mandate \citep[see e.g.][]{cabrera2023}. Bezos reorganised Amazon's corporate structure to mirror the service-oriented architecture of the software that the company was building, allowing Amazon to better exploit its technical infrastructure.\footnote{Amazon and the companies that followed Bezos's lead will now face this challenge again as the information infrastructure shifts with the advent of generative AI tools.} Innovation in organisational infrastructure and digital information structure needs to co-evolve.
+
+Modern AI systems present a new type of productivity paradox; a `social productivity' paradox that arises because traditional market and policy mechanisms have proven to be inadequate for connecting the supply of innovation to societal demand. 
+
+In the cycle displayed in Figure \ref{fig:innovation-cycle}, value creation and innovation reinforce each other, reflecting the traditional rational for innovation. The model fails when there is a disconnect between technological advancement and economic return. This dependence on quantifiable business returns contributes to public needs being left unaddressed, particularly in areas where social and economic value are not aligned or where the social value is harder to measure or monetise \citep{coyle2019}. 
+
+These dependencies between operational structures, communication patterns, and technologies, help explain why deployment is more successful in new economy areas, such as content generation, than in existing complex social domains. 
+
+The areas where there is most demand for innovative AI-enabled solutions do not have optimal solutions. These `wicked problems' are complex, multifaceted, and subject to contested values or problem-definitions \citep{rittel1973}. They typically arise from interconnected social, environmental, and technical systems, and are subject to high degrees of uncertainty. They resist one-size-fits-all responses \citep{arrow1950}, and addressing them does not readily admit an economic return. Areas where AI could deliver the greatest societal value are characterised by complexity in  organisational structures and the stakeholder environment, requiring innovation in institutional design and culture to absorb and deploy AI capabilities. In contrast, digital technologies are most profitable when deployed as one-size-fits-all solutions which necessarily cannot accommodate the underlying societal needs. 
+
+\begin{figure}[htbp]
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{innovation-reinvestment-cycle.pdf} 
+\end{center}
+\caption{The innovation cycle displayed here would normally be associated with efficiency savings based on monetary value. In the attention reinvestment cycle we move away from monetary capital and towards human capital. Innovation saves time which releases resource that builds human capital which allows for more innovation}\label{fig:innovation-cycle}
+\end{figure}
+
+Unfortunately, the productivity challenge presented by AI extends beyond traditional absorptive capacity. The social productivity paradox highlights a different capability gap: \emph{distributive capacity} --– the ability to deliberately redeploy technological capabilities in domains of societal importance. To get the best from these technologies, technical innovation is necessary, but a more complex cultural shift is also required to develop both absorptive capacity for new technologies and distributive capacity to direct them toward society's most pressing needs.
+
+\section{An attention reinvestment cycle for AI innovation}
+
+\subsection{Today's innovation models and the attention economy}
+
+The relationship between technological innovation and societal need should, in theory, be shaped by responsive market mechanisms that direct resources toward areas of greatest demand \citep{mazzucato2013entrepreneurial}. If these are not delivering for society, we need to look for new drivers of the innovation flywheel that are rooted in an understanding of these areas of demand. A starting point for identifying such drivers is understanding the role of human attention in the digital economy. 
+
+Information theory illustrates why human attention has become a bottleneck in the digital economy \citep{shannon1948}. While humans can share information at approximately 2000 bits per minute through speech, modern computing systems exchange information at rates approaching 60 billion bits per minute---an asymmetry equivalent to humans moving at walking pace while machines move at the speed of light \citep{lawrence2024}.
+
+\cite{simon1971} suggested ``What information consumes is rather obvious: it consumes the attention of its recipients. Hence a wealth of information creates a poverty of attention...''. In an environment where information is abundant and human attention is limited, human attention becomes the critical resource in the system---a rare commodity for which to optimise or compete. This scarcity means that the ability to capture and monetise attention is a source of economic and social power \citep{article}.
+
+Those who control vast data resources---typically large technology companies---gain disproportionate market power by leveraging their data advantage and algorithmic systems to capture and monetise human attention. The result is a system of `algorithmic attention rents' \citep{oreilly2023}. Attention capture leads to profits which when reinvested lead to greater capacity for attention capture. Rather than addressing the societal challenges that are central to public aspirations for AI, investment flows towards applications that capture and monetise attention.
+
+Policymakers have begun to recognise these structural imbalances, with the EU's Digital Markets Act (2022) and the UK's Digital Markets Competition and Consumer Act (2024) representing legislative attempts to redress the power imbalances in the digital economy. However, addressing the full scope of the innovation misalignment problem requires more than regulatory intervention; it requires rethinking how we value and direct technological progress.
+
+\subsection{The attention reinvestment cycle}
+
+Shifting how we deploy our individual attention is at the centre of people's aspirations for AI. Public dialogues show that people would like to have AI tools free their users from mundane administrative tasks and allow them to spend more time interacting with other people---healthcare workers would like to focus on patients, teachers on students, and so on. As one dialogue participant in 2024 public noted: ``My wife [an NHS nurse] says that the paperwork side takes longer than the actual care'' \citep{aiCam2024}. 
+
+This perspective suggests an alternative model for innovation that prioritises human attention. Rather than relying on economic returns from AI deployment, we can work with the time saved through AI-enabled efficiencies. The resource made available---human time---becomes the foundation of a new innovation cycle \citep{lawrence2024}.
+
+The cycle works by using technical innovation to automate routine tasks and improve workflows, releasing human attention for activities where human skills are most valuable---patient care, personalized teaching, complex problem-solving. For the cycle to continue, some attention must be invested in adapting these new processes and sharing insights with colleagues, ensuring that nurses and teachers, rather than tech CEOs, steer the technology's development.
+
+Innovation models are not neutral frameworks. They are structuring forces, which shape what counts as success and where resources flow. Establishing human attention as our metric of success creates a mechanism for aligning innovation with societal needs, recognising that AI's societal value comes primarily from enhancing human capabilities. Implementation requires connecting technical capabilities with societal needs. Similar to how supply chains match inventory with demand, effective AI innovation should prioritise understanding frontline needs before developing technical solutions. By starting with the operational realities in areas of intense societal need, the attention reinvestment cycle creates a virtuous cycle where technology development responds directly to societal priorities, closing the gap between what people want from AI and what the innovation economy delivers.
+
+In the traditional cycle, economic returns accrue to technology providers; power accrues to those that can control capital, capture attention, and monetise it, creating distance between those who profit and those affected by deployment. In the attention cycle, 'returns' (freed time) accrue directly to users. This shifts power dynamics in user-producer relationships (Lundvall, 1992). When nurses or teachers have freed time and agency to reinvest it in refining tools, they become co-producers steering innovation direction. 
+
+Kick-starting this cycle requires institutional structures that give agency to those on the frontlines of tackling the issues that are central to public concerns. These might come from procurement processes that prioritise user needs, management practices that give time and permission to adapt tools, and channels for sharing successful adaptations across contexts. These institutional innovations give space to move attention from a conceptual metric to a daily practice. Generative AI's accessibility helps make this shift feasible, lowering technical barriers and enabling frontline professionals to engage with and adapt tools in ways previous technologies did not permit. 
+
+\section{Conclusion}
+
+The new productivity paradox is that AI is advancing rapidly everywhere except where society needs it most---a misalignment where innovation systematically fails to address our most pressing problems, despite at least a decade of articulated public needs and the good intentions behind 'AI for good' research efforts.
+
+This misalignment is not an inevitable feature of AI. It is a result of how the innovation system is currently organised. This reflects institutional, economic, and cultural factors. The framing of innovation problems shapes what solutions are pursued and rewarded, influencing who leads technology development, where investment flows, and what constitutes success \citep{mazzucato2013entrepreneurial}. As technical capabilities shift, we can reimagine how AI innovation is prioritised, developed, and deployed in the service of broader societal goals.
+
+Translating this vision into practice requires collaborative networks that leverage multidisciplinary, community-centred approaches to innovation. Effective implementation demands solutions grounded in local contexts and needs, developed in partnership with frontline professionals and stakeholder communities who understand the operational realities of their domains. This approach echoes Popper's argument that positive social change emerges through 'piecemeal social engineers' working within institutions, rather than grand top-down designs  \citep{popper1945}. 
+
+These `engineers' include teachers, healthcare workers, civil servants, and community leaders who understand the nuanced challenges of their domains, and are engaged in the creation of practical solutions. The attention reinvestment cycle refocuses resources on supporting these piecemeal social engineers in deploying AI technologies, creating a virtuous cycle where technology development responds to societal priorities. This is both a conceptual reframing and a structural reorganisation: by centring attention rather than economic returns as an organising principle, the attention reinvestment cycle shifts power to shape innovation from capital holders to frontline professionals who experience the effects of technology deployment directly. 
+
+Deliberate institutional design, cultural change, and operational innovation is needed for the attention reinvestment cycle to function in practice. Organisations like Data Science Africa (DSA)\footnote{See \url{https://www.datascienceafrica.org/}.} illustrate the type of working practices that can support success. DSA’s summer schools support technical learning grounded in data science problems that emerge from local contexts; participants return as instructors, building capacity to scale; knowledge flows through practitioner networks that bridge from the field to the lab to the ministry. The result is a self-sustaining cycle where energy is reinvested in collective capability.
+
+In Cambridge, ai@cam is translating these principles into practice through activities that illustrate how the attention reinvestment cycle can be operationalised:: 
+\begin{itemize}
+    \item Hands-on learning sessions support researchers and practitioners to learn AI methods, with continuing machine learning engineering support helping them move from experiment to application. Open source toolkits enable users to adapt AI tools for their contexts, continuing a learning-by-building approach pioneered locally through systems such as Raspberry Pi and Acorn.
+    \item Translation activities bridge research, deployment, and policy. Interdisciplinary research teams develop AI solutions to real-world challenges - in areas from conservation research to public service delivery. Local authority partnerships and entrepreneurship support help move innovations from lab to real-world impact, testing prototypes against operational constraints.
+    \item Peer learning networks provide spaces for exploring shared applications and enabling knowledge flow. These take different forms: within the University, interdisciplinary research challenges convene researchers from diverse domains on shared problems; grassroots spaces, such as South Cambridgeshire District Council’s AI Club\footnote{See \url{https://www.local.gov.uk/our-support/council-assurance-and-peer-challenge/peer-challenges-we-offer/corporate-peer-47}.} where council workers explore applications together, show  ground-up knowledge-sharing in action.
+    \item Public dialogues connect to areas of public interest or concern, helping articulate research priorities and develop governance frameworks.
+\end{itemize}
+
+These activities represent work-in-progress, offering insights into both the potential and the challenges of implementing alternative innovation models. A critical bottleneck is moving from individual success to collective capability. This requires the confidence to teach others, and is enabled by expert engineering support not well recognised by traditional funding systems. 
+
+Public dialogues have consistently shown what people want from AI: tools that enhance human capabilities in healthcare, education, and public services, under democratic control. The attention reinvestment cycle offers a path to align innovation with these priorities---not through grand designs, but through networks of practitioners reinvesting freed time in refining and sharing solutions. In an age of information abundance, redirecting human attention to where it creates the most value may be AI's greatest contribution.
+
+
+\begin{Backmatter}
+
+\paragraph{Funding Statement}
+No specific funding.
+
+\paragraph{Competing Interests}
+None
+
+\paragraph{Data Availability Statement}
+This policy paper is not associated with underlying data.
+
+\paragraph{Ethical Standards}
+The research meets all ethical guidelines, including adherence to the legal requirements of the study country.
+
+\paragraph{Author Contributions}
+Conceptualization: N.D.L; J.K.M.; Writing original draft: N.D.L; J.K.M. All authors approved the final submitted draft.
+
+
+%\renewcommand\bibpreamble{By default, this template uses \texttt{bibtex} and adopts the AMS referencing style. However, the journal you’re submitting to may require a different reference style; specify the journal you're using with the class' \texttt{journal} option --- see lines 1--19 of \emph{sample.tex} for a list of options and instructions for selecting the journal.}
+
+% If using any of the following journal options:
+%   wet, dap, dce, eds, prm, flw, jdm, psy, rsm
+% then use the \printbibliography line instead of:
+%\bibliography{example}
+\printbibliography
+
+\end{Backmatter}
+
+\end{document}
