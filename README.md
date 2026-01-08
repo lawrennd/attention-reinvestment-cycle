@@ -116,11 +116,11 @@ For more details on the conversion pipeline, see [`README_DOCX_CONVERSION.md`](R
 ## Citation
 
 ```bibtex
-@article{lawrence2024attention,
+@article{lawrence2026attention,
   title={Mind the gap: Connecting AI innovation to widespread public value},
   author={Lawrence, Neil D. and Montgomery, Jessica K.},
   journal={Data and Policy},
-  year={2024},
+  year={2026},
   note={In submission}
 }
 ```
